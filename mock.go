@@ -27,14 +27,14 @@ func RandCityName(n int) string {
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	cityNames := make([]string, 0)
-	cityCount := 1000
+	cityCount := 10000
 	directions := make([]string, 4)
 	directions[0] = "north"
 	directions[1] = "east"
 	directions[2] = "south"
 	directions[3] = "west"
 
-	filename := "earth1000.txt"
+	filename := "earth10000.txt"
 	f, err := os.Create(filename)
 	check(err)
 	defer f.Close()
